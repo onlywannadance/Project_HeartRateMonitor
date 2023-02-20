@@ -1,0 +1,178 @@
+.catalog {
+    padding-bottom: 100px;
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+        list-style-type: none;
+        align-items: center;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    &__tab {
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        color: #6b6b6b;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 48px;
+        transform: skewX(-25deg);       // Делает прямоугольники под наклоном 
+        margin: 0 5px;                  // Равномерные отступы элементов по горизонтале, при этом они четко остаются по середине 
+        margin-top: 0px;
+        cursor: pointer;
+        transition: 0.15s all;
+        &:hover {
+            box-shadow: 3px 3px 20px $red-color;
+            border: none;
+        }
+        div {
+            transform: skewX(25deg);  
+        }
+        &_active {
+            color: #ffffff;
+            background-color: $red-color;
+            border: none;
+        }
+    }
+    &__content {
+        display: none;
+        justify-content: left;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        &_active {
+            display: flex;
+        }
+    }
+
+    &-item {
+        position: relative;
+        width: 300px;
+        min-height: 440px;
+        border: 2px solid #e8e8e8;           // solid - сплошная граница
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;                         // скрываем блок
+        margin: 0 16px 16px 0; 
+        &__img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;                 //Картинка в пределах размеров родительского блока!             
+            height: 200px; 
+        }
+        &__subtitle {
+            margin-top: 20px;
+            color: #0d0d0d;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+        }
+        &__descr {
+            margin-top: 16px;
+            color: #0d0d0d;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: center;
+        }
+        &__link {
+            display: block;
+            margin-top: 17px;
+            color: $red-color;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: underline;
+            &:hover {
+                color: $red-color;
+                border-radius: 100%;
+                border: none;
+            }
+        }
+        hr {
+            display: block;
+            margin: 0 auto;
+            background-color: #e8e8e8;
+            margin-top: 19px;
+            margin-bottom: 21px;
+            border-bottom: none;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__old-price {
+            color: #555555;
+            font-size: 14px;
+            font-weight: 300;
+            text-decoration: line-through;            // Перечеркивание текста
+        }
+        &__price {
+            color: #050505;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);                // Размеры под описание пульсометра
+        }
+        &__content {
+            width: 50%;                              // 50% от родителя = 100% =)
+            margin-right: 0px;
+            transform: translateX(-100%);
+            transition: 0.15s all;
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &__list {
+            width: 50%;                             // аналогично для описания
+            transform: translateX(0%);
+            padding-right: 20px;
+            transition: 0.15s all;
+            margin-bottom: 0;
+            &_active {
+                transform: translateX(-100%);
+                margin-right: 0px;
+            }
+            &_ul {
+                list-style-type: none;
+                li {
+                    position: relative;
+                    font-size: 14px;
+                    font-family: "Museo Sans 300";
+                    color: black;
+                    line-height: 1.2;
+                    margin-bottom: 20px;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 5px;
+                        height: 5px;
+                        background-color: $red-color;
+                        left: -14px;
+                        top: 7px;
+                    }
+                }
+            }
+        }
+        &__back {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            font-size: 14px;
+            font-family: "Museo Sans 500";
+            color: $red-color;
+            text-decoration: underline;
+            text-align: center;
+            text-transform: uppercase;
+            transform: translateX(calc(-50% - 19px));
+            &:hover {
+                color: $red-color;
+            }
+        }
+    } 
+}

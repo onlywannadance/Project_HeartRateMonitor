@@ -1,0 +1,55 @@
+ .overlay {
+    display: none;                          // Чтобы не был всегда затемнен
+    position: fixed;                        // Всегда в размере экрана
+    width: 100%;        
+    height: 100%;                                     
+    top: 0;                             
+    background-color: rgba(0,0,0, 0.56);  // Затемнение заднего фона черным цветом в 56%
+ }
+ .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);   // Одновременное выравнивание по центру по всем осям
+    width: 400px;
+    min-height: 400px;
+    background-color: #f2f2f2;
+    padding: 38px 40px 25px 40px;
+    &__close {
+        position: fixed;
+        color: $red-color;
+        top: 0;
+        right: -45px;
+        font-size: 60px;
+        line-height: 25px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    &__subtitle {
+        color: #0d0d0d;
+        font-size: 19px;
+        font-weight: 700; 
+        text-align: center;
+    }
+    &__description {
+        color: #0d0d0d;
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    &_mini {
+        min-height: 100px;    
+    }
+    .error {
+        border: 1px solid red;    //обводка неправильных полей ввода
+    }
+    label.error {
+        border: none;               //Выключить обводку всплывающих надписей
+        margin-bottom: 10px;
+    }
+ }
+
+ #consultation, #order, #thx {
+    display: none;
+ }

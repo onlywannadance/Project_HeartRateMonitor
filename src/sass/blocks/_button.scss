@@ -1,0 +1,40 @@
+.button {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: $red-color;
+    border: none;
+    font-size: 12px;
+    font-family: "Museo Sans 300";
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    &:hover {
+        box-shadow: 3px 3px 20px $red-color;
+        border: none;
+    }
+    &_main {
+        background-color: $red-color;
+        width: 300px;
+        height: 50px;
+        font-size: 16px;
+        font-family: "Museo Sans 300";
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center;
+    }    
+    &_submit {
+        width: 100%;
+        font-size: 16px;
+        height: 55px;
+        color: #ffffff;
+    } 
+    &_mini {
+        border-radius: 5px;
+        background-color: $red-color;
+        width: 131px;
+        height: 40px;
+    }  
+}
+

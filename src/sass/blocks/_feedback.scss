@@ -1,0 +1,33 @@
+.feedback {
+    padding-bottom: 70px;
+    &-item__content {
+        display: flex;
+        margin-top: 100px;
+        &__photo {
+            margin-top: 6px;
+        }
+        &__info {
+            width: 655px;
+            margin-left: 60px;
+        }
+        &__name {
+            font-size: 18px;
+            font-family: "Museo Sans 700";
+            color: black;
+            text-align: left;
+        }
+        &__exp {
+            margin-top: 10px;
+            font-size: 14px;
+            font-family: "Museo Sans 500";
+            color: rgb(100, 100, 100);
+        }
+        &__text {
+            margin-top: 16px;
+            line-height: 1.2;
+            font-size: 14px;
+            font-family: "Museo Sans 500";
+            color: black;
+        }
+    }
+}

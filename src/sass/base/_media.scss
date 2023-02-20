@@ -1,0 +1,127 @@
+// Выполнено 
+@media (max-width: 1000px) {
+    .carousel {
+        &__inner {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .slick-prev {
+            img {
+                display: none;
+            }
+        }
+        .slick-next {
+            img {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 950px) {
+    .catalog {
+        padding-bottom: 100px;
+        &__tabs {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__tab {
+            display: block;
+            margin-top: 15px;
+        }
+        &__content {
+            justify-content: center;
+            margin-top: 60px;
+        }
+        &__item {
+            position: relative;
+            width: 300px;
+            min-height: 440px;
+            border: 2px solid #e8e8e8;           // solid - сплошная граница
+            padding: 20px 20px 20px 20px;
+            overflow: hidden;                         // скрываем блок
+            margin: 0 20px 20px 20px;
+        }
+    }
+}
+// В разработке
+@media (max-width: 767px) {
+    .container {
+        max-width: 766px;
+    }
+    .promo {
+        max-width: 766px;
+    }
+    .advantages {
+        max-width: 766px;
+    }
+    .carousel {
+        .slick-prev {
+            display: none;
+        }
+        .slick-next {
+            display: none;
+        }
+    }
+    .catalog {
+        padding-bottom: 100px;
+        &__tabs {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__tab {
+            display: block;
+            margin-top: 15px;
+        }
+        &__content {
+            justify-content: center;
+            margin-top: 60px;
+        }
+        &__item {
+            position: relative;
+            width: 300px;
+            min-height: 440px;
+            border: 2px solid #e8e8e8;           // solid - сплошная граница
+            padding: 20px 20px 20px 20px;
+            overflow: hidden;                         // скрываем блок
+            margin: 0 20px 20px 20px;
+        }
+    }
+}
+
+@media (max-width: 481px) {
+    .container {
+        max-width: 480px;
+    }
+    .promo {
+        max-width: 480px;
+    }
+    .advantages {
+        max-width: 480x;
+    }
+    .carousel {
+        .slick-prev {
+            display: none;
+        }
+        .slick-next {
+            display: none;
+        }
+    }
+    .feed-form {
+        width: 220px;
+    }
+    .modal {
+        top: 50%;
+        left: 50%;
+        transform: translate(-65%,-50%);   // Одновременное выравнивание по центру по всем осям
+        width: 300px;
+        min-height: 400px;
+    }
+
+    .footer {
+        &__info {
+            width: 380px;
+        }
+    }
+}
